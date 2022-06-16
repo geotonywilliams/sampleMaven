@@ -4,7 +4,7 @@ agent any
 stages {
   stage('maven install') {
     steps {
-        withMaven(globalMavenSettingsConfig: 'null', jdk: 'JDK9', maven: 'Maven3', mavenSettingsConfig: 'null') {
+        withMaven(jdk: 'JDK9', maven: 'Maven3') {
                    sh 'mvn clean install'
                 }
             }
